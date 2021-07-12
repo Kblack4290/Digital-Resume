@@ -1,7 +1,7 @@
 import React, { useState, setState } from 'react'
 import { Drawer, ListItem, ListItemIcon, ListItemText, List, Divider, IconButton, AppBar, Toolbar, Typography, Button } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles'
-import { GetAppRounded, InfoRounded, AccountTreeRounded, EmailRounded } from '@material-ui/icons/';
+import { GetAppRounded, InfoRounded, AccountTreeRounded, EmailRounded, HomeRounded } from '@material-ui/icons/';
 import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
 
@@ -31,6 +31,11 @@ const Nav = (props) => {
     const { history } = props;
     const classes = useStyles();
     const itemList = [
+        {
+            text: 'Home',
+            icon: <HomeRounded />,
+            onClick: () => history.push('/')
+        },
         {
             text: 'About',
             icon: <InfoRounded />,
