@@ -1,14 +1,34 @@
 import React, { useState, setState } from 'react'
-import { Drawer, ListItem, ListItemIcon, ListItemText, List, Divider, IconButton, AppBar, Toolbar, Typography, Button } from '@material-ui/core/';
+import {
+    Drawer,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    List, Divider,
+    IconButton,
+    AppBar,
+    Toolbar,
+    Typography,
+    Button,
+    Avatar
+} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles'
-import { GetAppRounded, InfoRounded, AccountTreeRounded, EmailRounded, HomeRounded } from '@material-ui/icons/';
+import {
+    GetAppRounded,
+    InfoRounded,
+    AccountTreeRounded,
+    EmailRounded,
+    HomeRounded
+} from '@material-ui/icons/';
 import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
+import PikesPeak from "../Assets/img/Pikes-Peak-300x400.jpg"
 
 
-const useStyles = makeStyles((theme)=>({
+const useStyles = makeStyles((theme) => ({
     drawer: {
-        width: '200px'
+        width: '200px',
+        
     },
     root: {
         flexGrow: 1,
@@ -18,6 +38,10 @@ const useStyles = makeStyles((theme)=>({
     },
     title: {
         flexGrow: 1,
+    },
+    large: {
+        width: theme.spacing(15),
+        height: theme.spacing(15),
     },
 }));
 
@@ -81,8 +105,19 @@ const Nav = (props) => {
                 onClose={() => { setOpen(false) }}
                 onOpen={() => { }}
                 className={classes.drawer}>
-                <h1>Photo and Email goes here</h1>
+                <Avatar
+                    alt="Remy Sharp"
+                    src={PikesPeak}
+                    className={classes.large} />
+
+{/* #################### NEED PADDING ################ */}
+                    <List> <a 
+                    href="mailto:keithblack4290@gmail.com" 
+                    target="_blank" 
+                    >Keithblack4290@gmail.com </a></List>
+
                 <Divider />
+                
                 <List>
                     {itemList.map((item, index) => {
                         const { text, icon, onClick } = item;
