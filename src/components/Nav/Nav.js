@@ -22,13 +22,14 @@ import {
 } from '@material-ui/icons/';
 import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
-import PikesPeak from "../Assets/img/Pikes-Peak-300x400.jpg"
+import PikesPeak from "../../Assets/img/Pikes-Peak-300x400.jpg"
+import "./style.css"
 
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
         width: '200px',
-        
+
     },
     root: {
         flexGrow: 1,
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(15),
         height: theme.spacing(15),
     },
+
 }));
 
 
@@ -106,18 +108,23 @@ const Nav = (props) => {
                 onOpen={() => { }}
                 className={classes.drawer}>
                 <Avatar
-                    alt="Remy Sharp"
+                    alt="Image of Pikes Peak CO"
                     src={PikesPeak}
-                    className={classes.large} />
+                    className={classes.large}
+                    id="avatar"/>
+                    
 
-{/* #################### NEED PADDING ################ */}
-                    <List> <a 
-                    href="mailto:keithblack4290@gmail.com" 
-                    target="_blank" 
-                    >Keithblack4290@gmail.com </a></List>
+                {/* #################### NEED PADDING ################ */}
+                <List  > <a
+                    href="mailto:keithblack4290@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="email"
+                    
+                >Keithblack4290@gmail.com </a></List>
 
                 <Divider />
-                
+
                 <List>
                     {itemList.map((item, index) => {
                         const { text, icon, onClick } = item;

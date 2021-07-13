@@ -1,0 +1,13 @@
+#avatar{
+    margin-top: 20px;
+    align-self: center;
+}
+#email {
+color:inherit;
+padding: 20px;
+align-self: center;
+}
+#email:hover {
+    color: #0000ee;
+
+}
