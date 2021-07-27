@@ -85,7 +85,7 @@ const Nav = (props) => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar id="bar" position="static">
                 <Toolbar>
                     <IconButton
                         edge="start"

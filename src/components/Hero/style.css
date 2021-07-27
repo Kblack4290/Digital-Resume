@@ -1,0 +1,27 @@
+#hero{
+margin-bottom: 20px;
+height: 50vh;
+background: url(./Unioncrop.jpg);
+background-position: center;
+background-size:cover ;
+
+    
+}
+
+#about-header {
+    color: #fff;
+}
+
+/* #hero{
+
+    background: transparent;
+} */
+
+/* .hero-img{
+    height:100%;
+    width:100%;
+    object-fit:scale-down;
+    
+    
+
+} */
