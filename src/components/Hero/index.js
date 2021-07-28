@@ -1,20 +1,41 @@
 import "./style.css"
 import React from 'react'
-import { Box, Paper, Typography } from "@material-ui/core"
+import { Grid, Box, Paper, Typography } from "@material-ui/core"
 
 
 
 
 const Hero = () => {
     return (
-        <Paper component="div" id="hero" xs={12} >
-            <Box
+        <Paper  id="hero" xs={12} >
+            <Box component="div"
                 display="flex"
-                alignContent="center"
-                p={1}
-                m={1}
+                
+
                 sx={{ height: 100 }}>
-                <Typography variant="h1" id="about-header" >ABOUT ME </Typography>
+                <Grid xs={12} >
+                    <Grid xs={6} style={{ float: "left" }}>
+                        <Box
+                            pt={22}
+                            ml={5}
+                            alignItems="flex-end"
+                            justifyContent="center"
+                        >
+                            <Typography variant="h1" id="about-header" >ABOUT ME </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid xs={6} style={{ float: "right" }}>
+                        <Box
+                        justifyContent="center"
+                            alignItems="flex-end"
+                            pt={22}
+                            mr={5}
+
+                        >
+                            <Typography variant="h1" id="about-header" >SKILLS</Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
             </Box>
         </Paper>
     )
