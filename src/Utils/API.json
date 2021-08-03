@@ -1,0 +1,30 @@
+[
+    {
+        "id": "full",
+        "title": "Nerd Out",
+        "projectUrl": "https://haggle-proj.herokuapp.com/",
+        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "content": " NERDDDDDD OUTUUUTUTUUTUT "
+    },
+    {
+        "id": "full",
+        "title": "Budget Tracker",
+        "projectUrl": "https://haggle-proj.herokuapp.com/",
+        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "content": " BUDGET TRACKER TRACKING"
+    },
+    {
+        "id": "full",
+        "title": "Workout Tracker",
+        "projectUrl": "https://haggle-proj.herokuapp.com/",
+        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "content": " Workout Tracker"
+    },
+    {
+        "id": "full",
+        "title": "Haggle MVC",
+        "projectUrl": "https://haggle-proj.herokuapp.com/",
+        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "content": "MVC HAGGLE USING MYSQL"
+    }
+]
