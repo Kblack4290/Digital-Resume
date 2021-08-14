@@ -4,27 +4,32 @@
         "title": "Nerd Out",
         "projectUrl": "https://haggle-proj.herokuapp.com/",
         "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
-        "content": " NERDDDDDD OUTUUUTUTUUTUT "
+        "content": "Nerd Out is a blogging application where users can share thoughts and ideas. The user is able to create, edit, and delete their own posts on their personal dashboard. After a post is created, it is posted to the homepage where other subscribers can share their own opinions by leaving a comment. ",
+        "tech": "Javascript, CSS, Handlebars, Bootstrap, Node, NPM, Express, MySQL, Sequelize"
     },
     {
         "id": "full",
         "title": "Budget Tracker",
         "projectUrl": "https://haggle-proj.herokuapp.com/",
         "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
-        "content": " BUDGET TRACKER TRACKING"
+        "content": " This is a progressive web application to help the user better plan their finances. Each transaction can be added or subtracted depending on if the transaction is a debit or credit. If you loose your network do not worry. This application will store any transaction even if they are not connect to a network. The information submitted will be added to the database once the device is connected to a network.",
+        "tech": "Javascript, CSS, HTML, NPM, Express, Mongodb, Mongoose"
     },
     {
         "id": "full",
         "title": "Workout Tracker",
         "projectUrl": "https://haggle-proj.herokuapp.com/",
         "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
-        "content": " Workout Tracker"
+        "content": " This application allows the user to track their workouts. After the user is submits their workout for the day, it will be tracked in the users dashboard. The user will see their progression through out the last five days on their dashboard. Each workout is displayed and provides the user with stats.",
+        "tech": "Javascript, CSS, HTML, NPM, Express, Mongodb, Mongoose"
     },
     {
         "id": "full",
         "title": "Haggle MVC",
         "projectUrl": "https://haggle-proj.herokuapp.com/",
         "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
-        "content": "MVC HAGGLE USING MYSQL"
+        "content": "This application allows users to trade goods and services for other goods and services on a cashless/currency-less platform. You are able to view listings from all other users and send an email of interest to the poster to start the hagglin' process. ",
+        "tech": "Javascript, CSS, Handlebars, Bootstrap, NPM, Express, MySQL, Sequelize, Sendgrid, Multer"
+
     }
 ]

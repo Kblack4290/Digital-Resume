@@ -11,6 +11,9 @@ import Holiday from '../../Assets/img/HolidayParty.jpg'
 import Logo from '../../Assets/Logo/logo_size_invert.jpg'
 import PikesPeak from '../../Assets/img/Pikes-Peak-300x400.jpg'
 import Modal from '../Modal';
+import { Avatar } from '@material-ui/core';
+import AvatarGroup from '@material-ui/lab/AvatarGroup';
+
 
 const useStyles = makeStyles({
     root: {
@@ -33,18 +36,21 @@ export default function MediaCard(props) {
 
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2" >
-                    {props.title}
+                    <Typography gutterBottom variant="h4" component="h2" >
+                        {props.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" >
                         {props.content}
+                        <Typography variant="h6" color="textPrimary" component="h6">
+                            Technology:
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            {props.tech}
+                        </Typography>
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    Share
-                </Button>
 
                 <Modal />
 

@@ -16,6 +16,24 @@ import WorkOut from '../../Assets/img/FULLSTACK-WORKOUT.png'
 import HaggleMVC from '../../Assets/img/HAGGLE-MVC.png'
 import NoteTaker from '../../Assets/img/Frontend-NoteTaker.png'
 import { Grid } from '@material-ui/core';
+import GroupedAv from '../GroupedAv'
+import JsLogo from '../../Assets/Logo/Js-logo.png'
+import CssLogo from '../../Assets/Logo/css-logo.png'
+import GithubLogo from '../../Assets/Logo/Github-logo.png'
+import Html from '../../Assets/Logo/html-logo.png'
+import MongoDb from '../../Assets/Logo/mongodb-logo.png'
+import MySql from '../../Assets/Logo/mysql-logo.png'
+
+import BootstrapLogo from '../../Assets/Logo/bootstrap-logo.png'
+import ExpressLogo from '../../Assets/Logo/Express-logo.png'
+import FoundationLogo from '../../Assets/Logo/Foundation-logo.png'
+import GitLogo from '../../Assets/Logo/Git-logo.png'
+import GitlabLogo from '../../Assets/Logo/Gitlab-logo.png'
+import JQueryLogo from '../../Assets/Logo/Jquery-logo.png'
+import MaterialLogo from '../../Assets/Logo/Material-logo.png'
+import Node from '../../Assets/Logo/node-logo.png'
+import NpmLogo from '../../Assets/Logo/NPM-logo.png'
+import ReactLogo from '../../Assets/Logo/React-logo.png'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -63,6 +81,26 @@ export default function FullWidthTabs() {
     const [value, setValue] = React.useState(0);
     const fullstack = [Nerd, Budget, WorkOut, HaggleMVC]
 
+
+    // ***** Need to set varia'bles for each card that have their specific tools. For fontend and MERN I need sperate arrays that will gointo the AvatarGroup ***********************************
+
+    const nerdOut = [JsLogo, CssLogo, Node, BootstrapLogo, NpmLogo, ExpressLogo, MySql]
+    const budgetTacker = [JsLogo, CssLogo, Html, NpmLogo, ExpressLogo, MongoDb]
+    const workoutTracker = [JsLogo, CssLogo, Html, NpmLogo, ExpressLogo, MongoDb]
+    const haggleMVC = [JsLogo, CssLogo, BootstrapLogo, NpmLogo, ExpressLogo, MongoDb]
+
+    const numbers = ["1", "2", "3"]
+    const otherNum = ["4", "5", "6"]
+
+    const fullStackLogos = [
+        {
+            logos: JsLogo,
+        }
+
+    ]
+
+
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -70,6 +108,9 @@ export default function FullWidthTabs() {
     const handleChangeIndex = (index) => {
         setValue(index);
     };
+
+    console.log(fullStackLogos);
+    console.log(Projects);
 
     return (
         <div className={classes.root}>
@@ -100,7 +141,11 @@ export default function FullWidthTabs() {
                     <Card
                         image={MERN}
                         title="Haggle"
-                        content="HAGGLE HAGGLE HAGGLE" />
+                        content="Haggle is an application that allows users to trade goods and services for other goods and services on a cashless/currency-less platform. Within the application, a user can toggle through listings and communicate with other users within the app to haggle for items/services they are interested in."
+                        tech="Javascript, CSS, Mongodb, Express, React, Node, Bootstrap, S3, NPM"
+
+                    />
+
                 </TabPanel>
 
 
@@ -108,7 +153,7 @@ export default function FullWidthTabs() {
 
                     <Grid xs={12}>
                         <Box
-                            
+
                             display="flex"
                             flexWrap="wrap">
                             {Projects.map((Project, index) => {
@@ -125,9 +170,13 @@ export default function FullWidthTabs() {
 
                                                     image={fullstack[index]}
                                                     title={Project.title}
-                                                    content={Project.content} />
+                                                    content={Project.content}
+                                                    tech={Project.tech}
+                                                    key={index} />
+
 
                                             </div>
+
                                         </Box>
                                     </Grid>
 
@@ -141,7 +190,8 @@ export default function FullWidthTabs() {
                     <Card
                         image={NoteTaker}
                         title="Taker of Notes"
-                        content="Taking Mad Notes for REalzzz" />
+                        content="Taker of Notes is an application that serves as an easy to use note taker. The user is able to create, save, and delete their notes. "
+                        tech="Javascript, HTML, CSS, Express, Node, Fs, Path " />
                 </TabPanel>
 
 
@@ -150,7 +200,9 @@ export default function FullWidthTabs() {
 
 
         </div >
+
     );
+
 }
 
 
