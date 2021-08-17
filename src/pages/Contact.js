@@ -34,8 +34,9 @@ function sendEmail(e) {
 
     emailjs.sendForm('service_ecdl81r', 'template_nwu6j7r', e.target, 'user_jVGBrT34O3VrSEmUMmNmB')
         .then((result) => {
-            form.reset();
+            document.forms['myForm'].reset();
             alert('Thank you for your message!');
+            
             console.log(result.text);
             
         }, (error) => {

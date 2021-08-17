@@ -1,4 +1,5 @@
 import React, { useState, setState } from 'react'
+import { Link } from "react-router-dom";
 import {
     Drawer,
     ListItem,
@@ -18,7 +19,9 @@ import {
     InfoRounded,
     AccountTreeRounded,
     EmailRounded,
-    HomeRounded
+    HomeRounded, 
+    GitHub, 
+    LinkedIn
 } from '@material-ui/icons/';
 import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
@@ -56,6 +59,30 @@ const Nav = (props) => {
 
     const { history } = props;
     const classes = useStyles();
+
+    const contactList = [
+
+        {
+            text: 'Keithblack4290@gmail.com',
+            icon: <EmailRounded />,
+            link: "mailto:keithblack4290@gmail.com",
+
+
+        },
+
+        {
+            text: 'GitHub',
+            icon: <GitHub/>,
+            link: "https://github.com/Kblack4290",
+        },
+
+        {
+            text: 'LinkedIn',
+            icon: <LinkedIn />,
+            link: "https://www.linkedin.com/in/kblack4290/",
+        }
+
+    ]
     const itemList = [
         {
             text: 'Home',
@@ -111,17 +138,26 @@ const Nav = (props) => {
                     alt="Image of Pikes Peak CO"
                     src={PikesPeak}
                     className={classes.large}
-                    id="avatar"/>
-                    
+                    id="avatar" />
 
-                {/* #################### NEED PADDING ################ */}
-                <List  > <a
-                    href="mailto:keithblack4290@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    id="email"
-                    
-                >Keithblack4290@gmail.com </a></List>
+
+
+                <List>
+                    {contactList.map((item, index) => {
+                        const { text, icon, onClick, link } = item;
+                        return (
+                            <a href={link} target="_blank" rel="noopener noreferrer" primary={text} >
+                                <ListItem button key={text} onClick={onClick}>
+
+                                    {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                                    <ListItemText primary={text} />
+
+                                </ListItem>
+                            </a>
+
+                        )
+                    })}
+                </List>
 
                 <Divider />
 
@@ -137,7 +173,7 @@ const Nav = (props) => {
                     })}
                 </List>
             </Drawer>
-        </div>
+        </div >
     )
 }
 
