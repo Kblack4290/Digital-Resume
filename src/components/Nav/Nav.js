@@ -1,5 +1,4 @@
 import React, { useState, setState } from 'react'
-import { Link } from "react-router-dom";
 import {
     Drawer,
     ListItem,
@@ -11,7 +10,8 @@ import {
     Toolbar,
     Typography,
     Button,
-    Avatar
+    Avatar,
+    Box
 } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles'
 import {
@@ -19,12 +19,13 @@ import {
     InfoRounded,
     AccountTreeRounded,
     EmailRounded,
-    HomeRounded, 
-    GitHub, 
+    HomeRounded,
+    GitHub,
     LinkedIn
 } from '@material-ui/icons/';
 import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
+import InvertLogo from "../../Assets/Logo/logo_size.jpg"
 import PikesPeak from "../../Assets/img/Pikes-Peak-300x400.jpg"
 import "./style.css"
 
@@ -47,6 +48,15 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(15),
         height: theme.spacing(15),
     },
+
+    navIcons: {
+        color: "#ffff",
+        marginRight: "20px",
+        "&:hover": {
+            fontSize: "2.5rem",
+
+        }
+    }
 
 }));
 
@@ -72,7 +82,7 @@ const Nav = (props) => {
 
         {
             text: 'GitHub',
-            icon: <GitHub/>,
+            icon: <GitHub />,
             link: "https://github.com/Kblack4290",
         },
 
@@ -122,10 +132,23 @@ const Nav = (props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
+
+                    <Box className={classes.title} >
+                        <Avatar src={InvertLogo} />
+                    </Box>
+
+                    {contactList.map((item, index) => {
+                        const { text, icon, onClick, link } = item;
+                        return (
+                            <a href={link} target="_blank" rel="noopener noreferrer" onClick={onClick}  >
+                                <Box className={classes.navIcons}>
+                                    {icon}
+                                </Box>
+                            </a>
+
+                        )
+                    })}
+
                 </Toolbar>
             </AppBar>
             <Drawer

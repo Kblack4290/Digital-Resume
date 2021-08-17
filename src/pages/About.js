@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
     medium: {
         width: theme.spacing(8),
         height: theme.spacing(8),
-        "&:hover" : {
+        "&:hover": {
             width: theme.spacing(12),
-        height: theme.spacing(12),
+            height: theme.spacing(12),
         }
     }
 }));
@@ -169,9 +169,9 @@ const About = () => {
                                                 return (
 
                                                     <Grid xs={3}>
-                                                        <Box 
-                                                        p={1}
-                                                        m={1}>
+                                                        <Box
+                                                            p={1}
+                                                            m={1}>
                                                             <Avatar
                                                                 variant="rounded"
                                                                 src={logos[index]}
