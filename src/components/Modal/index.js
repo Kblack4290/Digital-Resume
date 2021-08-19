@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Modal, Backdrop, Fade, Button } from '@material-ui/core';
+import { Modal, Backdrop, Fade, Button, Box, Typography, Grid } from '@material-ui/core';
+import { GitHub } from '@material-ui/icons/'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+        padding: theme.spacing(2, 10, 3),
     },
 }));
 
-export default function TransitionsModal() {
+export default function TransitionsModal(props) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
 
@@ -34,6 +35,7 @@ export default function TransitionsModal() {
             <Button size="small" color="primary" onClick={handleOpen}>
                 Learn More
             </Button>
+            
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
@@ -48,8 +50,41 @@ export default function TransitionsModal() {
             >
                 <Fade in={open}>
                     <div className={classes.paper}>
-                        <h2 id="transition-modal-title">Transition modal</h2>
-                        <p id="transition-modal-description">react-transition-group animates me.</p>
+                        <Box  >
+                            <Grid xs={12}>
+                                <Grid xs={5} style={{ float: "left" }} >
+                                    <Box p={7}>
+                                        <Typography
+                                            variant="h5" >Repository:</Typography>
+                                        <Box
+                                            mt={2}
+                                            display="flex"
+                                            justifyContent="center">
+                                            <Button variant="contained" color="primary" href={props.githubUrl}>
+                                                <GitHub />
+                                            </Button>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+
+                                <Grid xs={7} style={{ float: "right" }}>
+                                    <Box p={7}
+                                    >
+                                        <Typography variant="h5">Deployed Link:</Typography>
+                                        <Box
+                                            mt={2}
+                                            display="flex"
+                                            justifyContent="center"
+                                        >
+                                            <Button variant="contained" color="primary" href={props.projectUrl}
+                                            >
+                                                Link
+                                            </Button>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </Box>
                     </div>
                 </Fade>
             </Modal>

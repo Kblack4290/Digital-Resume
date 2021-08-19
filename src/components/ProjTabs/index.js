@@ -143,6 +143,8 @@ export default function FullWidthTabs() {
                         title="Haggle"
                         content="Haggle is an application that allows users to trade goods and services for other goods and services on a cashless/currency-less platform. Within the application, a user can toggle through listings and communicate with other users within the app to haggle for items/services they are interested in."
                         tech="Javascript, CSS, Mongodb, Express, React, Node, Bootstrap, S3, NPM"
+                        githubUrl="https://github.com/domrafiti/ProjectThreeHaggle"
+                        projectUrl="https://proj-three-haggle.herokuapp.com/"
 
                     />
 
@@ -172,6 +174,8 @@ export default function FullWidthTabs() {
                                                     title={Project.title}
                                                     content={Project.content}
                                                     tech={Project.tech}
+                                                    githubUrl={Project.githubUrl}
+                                                    projectUrl={Project.projectUrl}
                                                     key={index} />
 
 
@@ -191,7 +195,10 @@ export default function FullWidthTabs() {
                         image={NoteTaker}
                         title="Taker of Notes"
                         content="Taker of Notes is an application that serves as an easy to use note taker. The user is able to create, save, and delete their notes. "
-                        tech="Javascript, HTML, CSS, Express, Node, Fs, Path " />
+                        tech="Javascript, HTML, CSS, Express, Node, Fs, Path "
+                        githubUrl="https://github.com/Kblack4290/Taker-Of-Notes"
+                        projectUrl="https://the-taker-of-notes.herokuapp.com/"
+                    />
                 </TabPanel>
 
 

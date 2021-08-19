@@ -27,22 +27,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Contact = () => {
-const classes = useStyles();
-const form = document.forms['myForm'];
-function sendEmail(e) {
-    e.preventDefault();
+    const classes = useStyles();
+    const form = document.forms['myForm'];
+    function sendEmail(e) {
+        e.preventDefault();
 
-    emailjs.sendForm('service_ecdl81r', 'template_nwu6j7r', e.target, 'user_jVGBrT34O3VrSEmUMmNmB')
-        .then((result) => {
-            document.forms['myForm'].reset();
-            alert('Thank you for your message!');
-            
-            console.log(result.text);
-            
-        }, (error) => {
-            console.log(error.text);
-        });
-}
+        emailjs.sendForm('service_ecdl81r', 'template_nwu6j7r', e.target, 'user_jVGBrT34O3VrSEmUMmNmB')
+            .then((result) => {
+                document.forms['myForm'].reset();
+                alert('Thank you for your message!');
+
+                console.log(result.text);
+
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
 
     return (
         <div style={{ marginTop: "50px" }}>
@@ -59,26 +59,26 @@ function sendEmail(e) {
                                 <Typography variant="h2" component="h4" >Contact</Typography>
                                 <Divider style={{ marginBottom: "5px" }} />
                                 <form noValidate autoComplete="off" onSubmit={sendEmail} id="myForm" >
-                                    <TextField 
-                                    id="outlined-basic" 
-                                    label="First Name" 
-                                    name="first_name" 
-                                    variant="outlined" 
-                                    style={{ margin: "5px" }} />
-                                    <TextField 
-                                    id="outlined-basic" 
-                                    label="Last Name" 
-                                    name="last_name" 
-                                    variant="outlined" 
-                                    style={{ margin: "5px" }} />
-                                    <Grid xs={12}>
-                                        <TextField 
-                                        fullWidth 
-                                        id="outlined-basic" 
-                                        label="Email" 
-                                        name="email" 
-                                        variant="outlined" 
+                                    <TextField
+                                        id="outlined-basic"
+                                        label="First Name"
+                                        name="first_name"
+                                        variant="outlined"
                                         style={{ margin: "5px" }} />
+                                    <TextField
+                                        id="outlined-basic"
+                                        label="Last Name"
+                                        name="last_name"
+                                        variant="outlined"
+                                        style={{ margin: "5px" }} />
+                                    <Grid xs={12}>
+                                        <TextField
+                                            fullWidth
+                                            id="outlined-basic"
+                                            label="Email"
+                                            name="email"
+                                            variant="outlined"
+                                            style={{ margin: "5px" }} />
                                         <TextField
                                             id="outlined-multiline-static"
                                             label="Lets Connect!"
@@ -91,11 +91,11 @@ function sendEmail(e) {
                                         />
                                     </Grid>
                                     <Button
-                                    type="submit" 
-                                    value="Submit"
-                                    variant="contained" 
-                                    color="primary" 
-                                    style={{ margin: "5px" }}>
+                                        type="submit"
+                                        value="Submit"
+                                        variant="contained"
+                                        color="primary"
+                                        style={{ margin: "5px" }}>
                                         Submit
                                     </Button>
                                 </form>

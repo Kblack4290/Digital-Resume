@@ -21,12 +21,14 @@ import {
     EmailRounded,
     HomeRounded,
     GitHub,
-    LinkedIn
+    LinkedIn,
+    Phone
 } from '@material-ui/icons/';
-import { withRouter } from "react-router-dom"
+import { withRouter, Link } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
 import InvertLogo from "../../Assets/Logo/logo_size.jpg"
 import PikesPeak from "../../Assets/img/Pikes-Peak-300x400.jpg"
+import Resume from "../../Assets/img/KBlack_DEV_Resume.pdf"
 import "./style.css"
 
 
@@ -90,7 +92,7 @@ const Nav = (props) => {
             text: 'LinkedIn',
             icon: <LinkedIn />,
             link: "https://www.linkedin.com/in/kblack4290/",
-        }
+        },
 
     ]
     const itemList = [
@@ -114,10 +116,6 @@ const Nav = (props) => {
             icon: <EmailRounded />,
             onClick: () => history.push('/Contact')
         },
-        {
-            text: 'Resume',
-            icon: <GetAppRounded />
-        }
     ]
 
     return (
@@ -137,8 +135,8 @@ const Nav = (props) => {
                         <Avatar src={InvertLogo} />
                     </Box>
 
-                    {contactList.map((item, index) => {
-                        const { text, icon, onClick, link } = item;
+                    {contactList.map((item,) => {
+                        const { icon, onClick, link } = item;
                         return (
                             <a href={link} target="_blank" rel="noopener noreferrer" onClick={onClick}  >
                                 <Box className={classes.navIcons}>
@@ -169,7 +167,12 @@ const Nav = (props) => {
                     {contactList.map((item, index) => {
                         const { text, icon, onClick, link } = item;
                         return (
-                            <a href={link} target="_blank" rel="noopener noreferrer" primary={text} >
+                            <a 
+                            href={link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            primary={text} 
+                            style={{ color: "#000000DE", textDecoration: "none" }} >
                                 <ListItem button key={text} onClick={onClick}>
 
                                     {icon && <ListItemIcon>{icon}</ListItemIcon>}
@@ -180,7 +183,14 @@ const Nav = (props) => {
 
                         )
                     })}
+                    <ListItem>
+                        <ListItemIcon>
+                            <Phone />
+                        </ListItemIcon>
+                        <ListItemText primary="(845)625-9783" />
+                    </ListItem>
                 </List>
+
 
                 <Divider />
 
@@ -194,8 +204,19 @@ const Nav = (props) => {
                             </ListItem>
                         )
                     })}
+                    <a
+                        href={Resume}
+                        rel="noreferrer"
+                        style={{ color: "#000000DE", textDecoration: "none" }} >
+                        <ListItem>
+                            <ListItemIcon>
+                                <GetAppRounded />
+                            </ListItemIcon>
+                            <ListItemText primary="Resume" />
+                        </ListItem>
+                    </a>
                 </List>
-            </Drawer>
+            </Drawer >
         </div >
     )
 }

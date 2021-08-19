@@ -2,24 +2,24 @@
     {
         "id": "full",
         "title": "Nerd Out",
-        "projectUrl": "https://haggle-proj.herokuapp.com/",
-        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "projectUrl": "https://protected-lowlands-63453.herokuapp.com/",
+        "githubUrl": "https://github.com/Kblack4290/Nerd-Out",
         "content": "Nerd Out is a blogging application where users can share thoughts and ideas. The user is able to create, edit, and delete their own posts on their personal dashboard. After a post is created, it is posted to the homepage where other subscribers can share their own opinions by leaving a comment. ",
         "tech": "Javascript, CSS, Handlebars, Bootstrap, Node, NPM, Express, MySQL, Sequelize"
     },
     {
         "id": "full",
         "title": "Budget Tracker",
-        "projectUrl": "https://haggle-proj.herokuapp.com/",
-        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "projectUrl": "https://budget-tracker4290.herokuapp.com/",
+        "githubUrl": "https://github.com/Kblack4290/Budget-Tracker",
         "content": " This is a progressive web application to help the user better plan their finances. Each transaction can be added or subtracted depending on if the transaction is a debit or credit. If you loose your network do not worry. This application will store any transaction even if they are not connect to a network. The information submitted will be added to the database once the device is connected to a network.",
         "tech": "Javascript, CSS, HTML, NPM, Express, Mongodb, Mongoose"
     },
     {
         "id": "full",
         "title": "Workout Tracker",
-        "projectUrl": "https://haggle-proj.herokuapp.com/",
-        "githubUrl": "https://github.com/domrafiti/ProjectTwoHaggle",
+        "projectUrl": "https://workout-tracker4290.herokuapp.com/",
+        "githubUrl": "https://github.com/Kblack4290/Workout-Tracker",
         "content": " This application allows the user to track their workouts. After the user is submits their workout for the day, it will be tracked in the users dashboard. The user will see their progression through out the last five days on their dashboard. Each workout is displayed and provides the user with stats.",
         "tech": "Javascript, CSS, HTML, NPM, Express, Mongodb, Mongoose"
     },
