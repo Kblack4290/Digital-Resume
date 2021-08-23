@@ -138,7 +138,11 @@ const Nav = (props) => {
                     {contactList.map((item,) => {
                         const { icon, onClick, link } = item;
                         return (
-                            <a href={link} target="_blank" rel="noopener noreferrer" onClick={onClick}  >
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={onClick}  >
                                 <Box className={classes.navIcons}>
                                     {icon}
                                 </Box>
@@ -167,12 +171,12 @@ const Nav = (props) => {
                     {contactList.map((item, index) => {
                         const { text, icon, onClick, link } = item;
                         return (
-                            <a 
-                            href={link} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            primary={text} 
-                            style={{ color: "#000000DE", textDecoration: "none" }} >
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                primary={text}
+                                style={{ color: "#000000DE", textDecoration: "none" }} >
                                 <ListItem button key={text} onClick={onClick}>
 
                                     {icon && <ListItemIcon>{icon}</ListItemIcon>}
