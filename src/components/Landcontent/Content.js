@@ -2,24 +2,26 @@ import React from 'react'
 import './styles.css'
 import Particles from 'react-particles-js';
 
+
 const Content = () => {
     return (
-        <div id="particles-js" >
+        <div  >
             <Particles
+                id="particles-js"
                 params={{
                     particles: {
                         enable: true,
                         number: {
-                            value: 100,
+                            value: 150,
                         },
                         color: {
-                            value: "#fff"
+                            value: "#a2b9bc"
                         },
                         shape: {
                             type: "circle",
                             stroke: {
                                 width: 0,
-                                color: "#fff"
+                                color: "#a2b9bc"
                             }
                         },
                         size: {
@@ -32,7 +34,7 @@ const Content = () => {
                         },
                         move: {
                             enable: true,
-                            speed: 5,
+                            speed: 1,
                             random: true,
                             bounce: true,
                             attract: {
@@ -41,23 +43,27 @@ const Content = () => {
                                 rotateY: 1200,
                             }
                         },
-                    
+
                         interactivity: {
-                            detectOn: "canvas window parent",
-                            events : {
+                            detectOn: "canvas",
+                            events: {
                                 onHover: {
                                     enable: true,
                                     mode: "repulse"
                                 },
-                                onclick: {
+                                resize: true,
+                                onClick: {
                                     enable: true,
                                     mode: "push"
                                 }
                             },
-                            modes:{
-                                repulse:{
-                                    distance: 50,
-                                    duration:0.4,
+                            modes: {
+                                repulse: {
+                                    distance: 200,
+                                    duration: 0.4,
+                                },
+                                push:{
+                                    quantity: 4,
                                 }
                             }
                         },
@@ -70,6 +76,7 @@ const Content = () => {
                 }}
 
             />
+
 
 
 

@@ -1,49 +1,82 @@
 import React from 'react'
 import Content from '../components/Landcontent/Content'
-import { Container, Grid, Paper, Typography, Box } from '@material-ui/core'
+import {  Grid, Typography, Box, Button } from '@material-ui/core'
 
 
 const Landing = () => {
     return (
-        <div>
-            <Content />
-            <div>
-                <Container id="landContainer">
-
-                    <Grid
-                        container
-                        direction="row"
-                        justifyContent="center"
-                        alignItems="center">
-
-                        <Paper
-                            elevation={0}
-                            style={{ width: "75%", background: "transparent" }}>
-                            <Typography component="div" >
-                                <Box
-                                    letterSpacing={6}
-                                    color="#fff"
-                                    textAlign="left" m={-1}
-                                    fontWeight="fontWeightBold"
-                                    fontSize={200}
-                                    fontStyle="italic">Keith</Box>
-                                <Box
-                                    letterSpacing={6}
-                                    color="#fff"
-                                    textAlign="right" m={-10}
-                                    fontWeight="fontWeightBold"
-                                    fontSize={200}
-                                    fontStyle="italic"
-                                >Black</Box>
-
-
-                            </Typography>
-                        </Paper>
-
-                    </Grid>
-                </Container>
+        <Grid>
+            <div >
+                <Content />
             </div>
-        </div>
+
+
+
+
+            <Grid
+                id="landContainer"
+                xs={12}>
+
+                <Typography
+                    variant="h1">
+                    <Box
+                        letterSpacing={20}
+                        color="#fff"
+                        justifyContent="flex-start"
+                        fontWeight="fontWeightBold"
+                        display="flex"
+                        fontStyle="italic">
+                        Keith
+                    </Box>
+                </Typography>
+
+                <Typography
+                    variant="h1">
+                    <Box
+                        letterSpacing={20}
+                        color="#fff"
+                        display="flex"
+                        justifyContent="center"
+                        fontWeight="fontWeightBold"
+                        fontStyle="italic"
+
+                    >
+                        Black
+                    </Box>
+
+                </Typography>
+
+                <Typography variant="h5">
+                    <Box
+                        mt={5}
+                        letterSpacing={5}
+                        color="#fff"
+                        justifyContent="flex-start"
+                        fontWeight="fontWeightBold"
+                        fontStyle="italic"
+                        display="flex"
+                    >
+                        A Software Developer!
+                        <Box
+                            ml={5}
+                        >
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                href="./About">
+                                Learn More
+                            </Button>
+                        </Box>
+                    </Box>
+
+
+                </Typography>
+
+            </Grid>
+
+
+        </Grid>
+
     )
 }
 

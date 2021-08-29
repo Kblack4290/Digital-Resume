@@ -1,7 +1,7 @@
 
-/* #bar {
-    background:transparent !important;
-} */
+#bar {
+    background: rgb(44, 44, 53) !important;
+} 
 #avatar{
     margin-top: 20px;
     align-self: center;

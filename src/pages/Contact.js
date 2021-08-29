@@ -45,7 +45,7 @@ const Contact = () => {
     }
 
     return (
-        <div style={{ marginTop: "50px" }}>
+        <div style={{ marginTop: "100px" }}>
             <Container style={styles.bgImg} className={classes.root} >
 
                 <Box p={5}  >

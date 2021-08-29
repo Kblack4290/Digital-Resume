@@ -26,6 +26,7 @@ import ReactLogo from '../Assets/Logo/React-logo.png'
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        marginTop: 100,
     },
     paper: {
         padding: theme.spacing(2),
@@ -56,7 +57,7 @@ const About = () => {
 
         <div>
 
-            <Container component="div" className={classes.root} style={{ background: "#eee" }}>
+            <Container component="div" className={classes.root} >
 
                 <Hero />
                 <Grid xs={12}>

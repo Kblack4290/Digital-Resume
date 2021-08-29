@@ -1,5 +1,14 @@
+
+body{
+
+    background-color: rgb(58, 59, 62)
+}
+
 #landContainer {
     position:absolute;
-    top:15%;
+    top:25%;
+    right:25%;
+    left:25%
+    
 
 }

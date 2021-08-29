@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import Nav from "./components/Nav/Nav"
+import Particles from "./components/Landcontent/Content"
 import './App.css';
 
 function App() {
@@ -13,22 +14,24 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
+          
           <Landing />
+
         </Route>
         <Route exact path="/About">
-        <About />
+          <About />
         </Route>
         <Route exact path="/Projects">
-        <Projects />
+          <Projects />
         </Route>
         <Route exact path="/Contact">
-        <Contact/>
+          <Contact />
         </Route>
       </Switch>
 
     </Router>
   );
-  
+
 }
 
 

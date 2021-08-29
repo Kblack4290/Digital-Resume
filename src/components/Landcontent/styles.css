@@ -1,5 +1,5 @@
 #particles-js{
-    background: black;
+    background-color: rgb(58, 59, 62);
     width: 100%;
     height: 100vh;
     
@@ -7,8 +7,3 @@
 }
 
 
-.container {
-    padding: 20px;
-    margin: 20px;
-    background: #eee;
-}
