@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Content from '../components/Landcontent/Content'
-import {  Grid, Typography, Box, Button } from '@material-ui/core'
+import { Container, Grid, Typography, Box, Button } from '@material-ui/core'
 
 
 const Landing = () => {
     return (
-        <Grid>
+        <Grid container >
             <div >
                 <Content />
             </div>
@@ -13,19 +14,20 @@ const Landing = () => {
 
 
 
-            <Grid
-                id="landContainer"
-                xs={12}>
+            <Grid id="landContainer"
+
+                xs={12} md={12}>
 
                 <Typography
-                    variant="h1">
+                    variant="h1" component="h1">
                     <Box
                         letterSpacing={20}
                         color="#fff"
                         justifyContent="flex-start"
                         fontWeight="fontWeightBold"
                         display="flex"
-                        fontStyle="italic">
+                        fontStyle="italic"
+                        className="name">
                         Keith
                     </Box>
                 </Typography>
@@ -39,6 +41,7 @@ const Landing = () => {
                         justifyContent="center"
                         fontWeight="fontWeightBold"
                         fontStyle="italic"
+                        className="name"
 
                     >
                         Black
@@ -46,7 +49,7 @@ const Landing = () => {
 
                 </Typography>
 
-                <Typography variant="h5">
+                <Typography variant="h5" id="subtitle">
                     <Box
                         mt={5}
                         letterSpacing={5}
@@ -59,13 +62,14 @@ const Landing = () => {
                         A Software Developer!
                         <Box
                             ml={5}
-                        >
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                href="./About">
-                                Learn More
-                            </Button>
+                        > <Link to="/About" className={window.location.pathname === "/About"}>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    href="./About">
+                                    Learn More
+                                </Button>
+                            </Link>
                         </Box>
                     </Box>
 

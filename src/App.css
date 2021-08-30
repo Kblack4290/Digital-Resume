@@ -1,14 +1,33 @@
-
-body{
+body {
 
     background-color: rgb(58, 59, 62)
 }
 
 #landContainer {
-    position:absolute;
-    top:25%;
-    right:25%;
-    left:25%
-    
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    left: 25%
+}
 
+@media only screen and (max-width: 375px) {
+    /* body{
+       
+    } */
+    #landContainer {
+        background-color: lightblue;
+        position:none;
+        max-width: 75vw;
+        
+        
+        
+        
+    }
+    .name{
+        font-size: xx-large;
+    }
+
+    #subtitle{
+        font-size: medium;
+    }
 }

@@ -140,7 +140,7 @@ const Nav = (props) => {
                     {contactList.map((item,) => {
                         const { icon, onClick, link } = item;
                         return (
-                            <a
+                            <a className="navIcon"
                                 href={link}
                                 target="_blank"
                                 rel="noopener noreferrer"
