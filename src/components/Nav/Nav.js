@@ -1,6 +1,6 @@
 import React, { useState, setState } from 'react'
 import {
-    Drawer,
+    SwipeableDrawer,
     ListItem,
     ListItemIcon,
     ListItemText,
@@ -155,7 +155,7 @@ const Nav = (props) => {
 
                 </Toolbar>
             </AppBar>
-            <Drawer
+            <SwipeableDrawer
                 anchor="left"
                 open={open}
                 onClose={() => { setOpen(false) }}
@@ -222,7 +222,7 @@ const Nav = (props) => {
                         </ListItem>
                     </a>
                 </List>
-            </Drawer >
+            </SwipeableDrawer >
         </div >
     )
 }

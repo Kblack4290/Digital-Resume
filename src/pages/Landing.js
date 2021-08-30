@@ -6,80 +6,86 @@ import { Container, Grid, Typography, Box, Button } from '@material-ui/core'
 
 const Landing = () => {
     return (
-        <Grid container >
-            <div >
-                <Content />
-            </div>
+
+        <div>
+            <Content />
 
 
 
 
-            <Grid id="landContainer"
 
-                xs={12} md={12}>
-
-                <Typography
-                    variant="h1" component="h1">
-                    <Box
-                        letterSpacing={20}
-                        color="#fff"
-                        justifyContent="flex-start"
-                        fontWeight="fontWeightBold"
-                        display="flex"
-                        fontStyle="italic"
-                        className="name">
-                        Keith
-                    </Box>
-                </Typography>
-
-                <Typography
-                    variant="h1">
-                    <Box
-                        letterSpacing={20}
-                        color="#fff"
-                        display="flex"
-                        justifyContent="center"
-                        fontWeight="fontWeightBold"
-                        fontStyle="italic"
-                        className="name"
-
-                    >
-                        Black
-                    </Box>
-
-                </Typography>
-
-                <Typography variant="h5" id="subtitle">
-                    <Box
-                        mt={5}
-                        letterSpacing={5}
-                        color="#fff"
-                        justifyContent="flex-start"
-                        fontWeight="fontWeightBold"
-                        fontStyle="italic"
-                        display="flex"
-                    >
-                        A Software Developer!
+            <Grid  id="landContainer"  >
+                <Grid xs={12}>
+                    <Typography
+                        variant="h1" component="h1">
                         <Box
-                            ml={5}
-                        > <Link to="/About" className={window.location.pathname === "/About"}>
+                            letterSpacing={20}
+                            color="#fff"
+                            justifyContent="flex-start"
+                            fontWeight="fontWeightBold"
+                            display="flex"
+                            fontStyle="italic"
+                            className="first name">
+                            Keith
+                        </Box>
+                    </Typography>
+
+                    <Typography
+                        variant="h1">
+                        <Box
+                            letterSpacing={20}
+                            color="#fff"
+                            display="flex"
+                            justifyContent="center"
+                            fontWeight="fontWeightBold"
+                            fontStyle="italic"
+                            className="last name"
+
+                        >
+                            Black
+                        </Box>
+
+                    </Typography>
+                </Grid>
+
+                <Grid row xs={12} >
+                    <Grid xs={12} md={8} id="subtitle">
+                        <Typography variant="h5">
+                            <Box
+                                mt={5}
+                                letterSpacing={3}
+                                color="#fff"
+                                justifyContent="flex-start"
+                                fontWeight="fontWeightBold"
+                                fontStyle="italic"
+                                display="flex"
+                                className="subtitle"
+                            >
+                                A Software Developer!
+                            </Box>
+                        </Typography>
+                    </Grid>
+
+                    <Grid xs={12} md={4} id="button" >
+                        <Box
+                            mt={5}>
+                            <Link to="/About" className={window.location.pathname === "/About"}>
                                 <Button
                                     variant="contained"
                                     color="primary"
-                                    href="./About">
+                                    href="./About"
+                                    className="button">
                                     Learn More
                                 </Button>
                             </Link>
                         </Box>
-                    </Box>
+                    </Grid>
 
-
-                </Typography>
-
+                </Grid>
             </Grid>
 
 
-        </Grid>
+        </div>
 
     )
 }

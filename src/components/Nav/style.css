@@ -16,12 +16,3 @@ align-self: center;
 
 }
 
-.navIcon{
-    display: none;
-}
-
-@media only screen and (max-width:375) {
-    #bar{
-        max-width: 100%;
-    }
-}

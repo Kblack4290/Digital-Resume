@@ -1,11 +1,12 @@
 import React from 'react'
 import './styles.css'
 import Particles from 'react-particles-js';
+import {Grid} from '@material-ui/core'
 
 
 const Content = () => {
     return (
-        <div  >
+        <Grid xs={12}>
             <Particles
                 id="particles-js"
                 params={{
@@ -83,7 +84,7 @@ const Content = () => {
 
 
 
-        </div>
+        </Grid>
 
 
     )
