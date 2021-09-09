@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     textField: {
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
-        width: '25ch',
+        width: '100%',
     },
 }));
 
@@ -45,68 +45,79 @@ const Contact = () => {
     }
 
     return (
-        <div style={{ marginTop: "100px" }}>
-            <Container style={styles.bgImg} className={classes.root} >
-
-                <Box p={5}  >
-
-
-
-
-                    <Grid xs={12} >
-                        <Box p={10} >
-                            <Paper style={{ width: "100%", padding: "20px" }} >
-                                <Typography variant="h2" component="h4" >Contact</Typography>
-                                <Divider style={{ marginBottom: "5px" }} />
-                                <form noValidate autoComplete="off" onSubmit={sendEmail} id="myForm" >
-                                    <TextField
-                                        id="outlined-basic"
-                                        label="First Name"
-                                        name="first_name"
-                                        variant="outlined"
-                                        style={{ margin: "5px" }} />
-                                    <TextField
-                                        id="outlined-basic"
-                                        label="Last Name"
-                                        name="last_name"
-                                        variant="outlined"
-                                        style={{ margin: "5px" }} />
-                                    <Grid xs={12}>
-                                        <TextField
-                                            fullWidth
-                                            id="outlined-basic"
-                                            label="Email"
-                                            name="email"
-                                            variant="outlined"
-                                            style={{ margin: "5px" }} />
-                                        <TextField
-                                            id="outlined-multiline-static"
-                                            label="Lets Connect!"
-                                            multiline
-                                            rows={4}
-                                            variant="outlined"
-                                            fullWidth
-                                            style={{ margin: "5px" }}
-                                            name="message"
-                                        />
-                                    </Grid>
-                                    <Button
-                                        type="submit"
-                                        value="Submit"
-                                        variant="contained"
-                                        color="primary"
-                                        style={{ margin: "5px" }}>
-                                        Submit
-                                    </Button>
-                                </form>
-                            </Paper>
-                        </Box>
-                    </Grid>
-
-
+        <  Grid
+            container
+            item
+            xs={12}
+            id="contact-container"
+            className={classes.root}
+            style={styles.bgImg}  >
+            <Grid
+                item
+                xs={12}
+                lg={6} >
+                <Box
+                    p={10}
+                    id="form-box" >
+                    <Paper
+                        style={{ padding: "20px" }} >
+                        <Typography
+                            variant="h2"
+                            component="h4" >
+                            Contact
+                        </Typography>
+                        <Divider
+                            style={{ marginBottom: "5px" }} />
+                        <form
+                            noValidate
+                            autoComplete="off"
+                            onSubmit={sendEmail}
+                            id="myForm" >
+                            <TextField
+                                id="outlined-basic"
+                                label="First Name"
+                                name="first_name"
+                                variant="outlined"
+                                style={{ margin: "5px" }} />
+                            <TextField
+                                id="outlined-basic"
+                                label="Last Name"
+                                name="last_name"
+                                variant="outlined"
+                                style={{ margin: "5px" }} />
+                            <Grid xs={12}>
+                                <TextField
+                                    fullWidth
+                                    id="outlined-basic"
+                                    label="Email"
+                                    name="email"
+                                    variant="outlined"
+                                    style={{ margin: "5px" }} />
+                                <TextField
+                                    id="outlined-multiline-static"
+                                    label="Lets Connect!"
+                                    multiline
+                                    rows={4}
+                                    variant="outlined"
+                                    fullWidth
+                                    style={{ margin: "5px" }}
+                                    name="message"
+                                />
+                            </Grid>
+                            <Button
+                                type="submit"
+                                value="Submit"
+                                variant="contained"
+                                color="primary"
+                                style={{ margin: "5px" }}>
+                                Submit
+                            </Button>
+                        </form>
+                    </Paper>
                 </Box>
-            </Container>
-        </div>
+            </Grid>
+
+        </Grid>
     )
 }
 

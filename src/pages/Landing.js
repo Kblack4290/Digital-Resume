@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Content from '../components/Landcontent/Content'
-import { Container, Grid, Typography, Box, Button } from '@material-ui/core'
+import { Grid, Typography, Box, Button } from '@material-ui/core'
 
 
 const Landing = () => {
