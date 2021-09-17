@@ -13,15 +13,15 @@ const Hero = () => {
                 
 
                 sx={{ height: 100 }}>
-                <Grid xs={12} >
-                    <Grid xs={6} style={{ float: "left" }}>
+                <Grid item xs={12} >
+                    <Grid item xs={6} style={{ float: "left" }}>
                         <Box
                             pt={22}
                             ml={5}
                             alignItems="flex-end"
                             justifyContent="center"
                         >
-                            <Typography variant="h1" id="about-header" >ABOUT ME </Typography>
+                            <Typography variant="h1" id="about-header" >ABOUT</Typography>
                         </Box>
                     </Grid>
                     <Grid xs={6} style={{ float: "right" }}>

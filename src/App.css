@@ -39,6 +39,12 @@ body {
 
 }
 
+@media only screen and (min-width: 960px) {
+    #card-header {
+        display:none;
+    }
+}
+
 @media only screen and (max-width: 812px) {
 
     .subtitle {
@@ -55,6 +61,16 @@ body {
         font-size: 4rem;
     }
 
+}
+
+@media only screen and (max-width: 745px) {
+    #about-content {
+        float: none;
+    }
+
+    #skills-content {
+        float: none
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -87,10 +103,13 @@ body {
         width: 100% !important;
         margin-left: 50%;
     }
+
+
     #contact-container {
         margin-top: 60px;
         padding: 40px;
     }
+
     #form-box {
         padding: 0;
     }

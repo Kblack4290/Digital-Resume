@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, Box, Paper, Typography, Avatar } from "@material-ui/core"
+import { Container, Grid, Box, Paper, Typography, Avatar, Divider } from "@material-ui/core"
 import Holiday from '../Assets/img/HolidayParty.jpg'
 import Hero from '../components/Hero'
 import LogoBl from '../Assets/Logo/logo_size_invert.jpg'
@@ -60,17 +60,24 @@ const About = () => {
             <Container component="div" className={classes.root} >
 
                 <Hero />
-                <Grid xs={12}>
+                <Grid item xs={12}>
 
-                    <Grid xs={6} style={{ float: "left" }}>
+                    <Grid item id="about-content" xs={12} md={6} style={{ float: "left" }}>
                         <Box display="flex"
                             p={1}
-                            mr={1}>
+                            mr={0}>
                             <Paper
                                 elevation={3}
                                 style={{ background: "white" }}>
 
-
+                                <Grid item xs={12} id="card-header" >
+                                    <Box
+                                        display="flex"
+                                        justifyContent="center">
+                                        <Typography variant="h1" component="h1">About</Typography>
+                                    </Box>
+                                    <Divider />
+                                </Grid>
 
                                 <Grid item >
                                     <Box
@@ -94,7 +101,7 @@ const About = () => {
                                             fontSize="fontSize"
                                             textAlign="center"
                                             px={1}
-                                            mx={10}
+                                            mx={2}
                                             my={1}>
 
                                             <p>Hello, I am Keith, I am a Software Developer with a background in management and business development.
@@ -129,22 +136,31 @@ const About = () => {
                     </Grid>
 
 
-                    <Grid xs={6} style={{ float: "right" }}>
+                    <Grid xs={12} md={6} id="skills-content" style={{ float: "right" }}>
 
                         <Box
                             p={1}
-                            ml={1}>
+                            ml={0}>
                             <Paper
                                 elevation={3}>
+                                <Grid item xs={12} id="card-header" >
+                                    <Box
+                                        display="flex"
+                                        justifyContent="center">
+                                        <Typography variant="h1" component="h1">Skills</Typography>
+                                    </Box>
+                                    <Divider />
+                                </Grid>
 
                                 <Box
                                     display="flex"
                                     justifyContent="center"
                                     pt={5}
                                 >
+
                                     <Avatar
 
-                                        alt="Holiday Party"
+                                        alt="KB Logo"
                                         src={LogoBl}
                                         className={classes.large} >
 
@@ -154,7 +170,7 @@ const About = () => {
                                     fontSize="fontSize"
                                     textAlign="center"
                                     px={1}
-                                    mx={10}
+                                    mx={2}
                                     my={1}>
                                     <Typography >
 
@@ -169,7 +185,7 @@ const About = () => {
                                             {logos.map((Logo, index) => {
                                                 return (
 
-                                                    <Grid xs={3}>
+                                                    <Grid xs={4} sm={3}>
                                                         <Box
                                                             p={1}
                                                             m={1}>

@@ -135,6 +135,7 @@ export default function FullWidthTabs() {
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}
                 onChangeIndex={handleChangeIndex}
+                
             >
 
                 <TabPanel value={value} index={0} dir={theme.direction}>
@@ -151,7 +152,11 @@ export default function FullWidthTabs() {
                 </TabPanel>
 
 
-                <TabPanel xs={12} value={value} index={1} dir={theme.direction}>
+                <TabPanel 
+                xs={12} 
+                value={value} 
+                index={1} 
+                dir={theme.direction}>
 
                     <Grid xs={12}>
                         <Box
@@ -161,7 +166,7 @@ export default function FullWidthTabs() {
                             {Projects.map((Project, index) => {
 
                                 return (
-                                    <Grid xs={6} >
+                                    <Grid xs={12} sm={6} >
                                         <Box
 
                                             p={1}
