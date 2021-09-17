@@ -5,12 +5,17 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Holiday from '../../Assets/img/HolidayParty.jpg'
-import Logo from '../../Assets/Logo/logo_size_invert.jpg'
-import PikesPeak from '../../Assets/img/Pikes-Peak-300x400.jpg'
-import { Modal, Backdrop, Fade, Button, Box, Typography, Grid } from '@material-ui/core';
-import AvatarGroup from '@material-ui/lab/AvatarGroup';
+import {
+    Modal,
+    Backdrop,
+    Fade,
+    Button,
+    Box,
+    Typography,
+    Grid
+} from '@material-ui/core';
 import { GitHub } from '@material-ui/icons/'
+import "./styles.css"
 
 
 
@@ -90,8 +95,8 @@ export default function MediaCard(props) {
                         <div className={classes.paper}>
                             <Box  >
                                 <Grid xs={12}>
-                                    <Grid xs={5} style={{ float: "left" }} >
-                                        <Box p={7}>
+                                    <Grid xs={12} sm={5} id="repo-link"  >
+                                        <Box p={2}>
                                             <Typography
                                                 variant="h5" >Repository:</Typography>
                                             <Box
@@ -110,8 +115,8 @@ export default function MediaCard(props) {
                                         </Box>
                                     </Grid>
 
-                                    <Grid xs={7} style={{ float: "right" }}>
-                                        <Box p={7}
+                                    <Grid xs={12} sm={7} id="deployed-link" >
+                                        <Box p={2}
                                         >
                                             <Typography variant="h5">Deployed Link:</Typography>
                                             <Box

@@ -16,24 +16,7 @@ import WorkOut from '../../Assets/img/FULLSTACK-WORKOUT.png'
 import HaggleMVC from '../../Assets/img/HAGGLE-MVC.png'
 import NoteTaker from '../../Assets/img/Frontend-NoteTaker.png'
 import { Grid } from '@material-ui/core';
-import GroupedAv from '../GroupedAv'
-import JsLogo from '../../Assets/Logo/Js-logo.png'
-import CssLogo from '../../Assets/Logo/css-logo.png'
-import GithubLogo from '../../Assets/Logo/Github-logo.png'
-import Html from '../../Assets/Logo/html-logo.png'
-import MongoDb from '../../Assets/Logo/mongodb-logo.png'
-import MySql from '../../Assets/Logo/mysql-logo.png'
 
-import BootstrapLogo from '../../Assets/Logo/bootstrap-logo.png'
-import ExpressLogo from '../../Assets/Logo/Express-logo.png'
-import FoundationLogo from '../../Assets/Logo/Foundation-logo.png'
-import GitLogo from '../../Assets/Logo/Git-logo.png'
-import GitlabLogo from '../../Assets/Logo/Gitlab-logo.png'
-import JQueryLogo from '../../Assets/Logo/Jquery-logo.png'
-import MaterialLogo from '../../Assets/Logo/Material-logo.png'
-import Node from '../../Assets/Logo/node-logo.png'
-import NpmLogo from '../../Assets/Logo/NPM-logo.png'
-import ReactLogo from '../../Assets/Logo/React-logo.png'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -82,25 +65,6 @@ export default function FullWidthTabs() {
     const fullstack = [Nerd, Budget, WorkOut, HaggleMVC]
 
 
-    // ***** Need to set varia'bles for each card that have their specific tools. For fontend and MERN I need sperate arrays that will gointo the AvatarGroup ***********************************
-
-    const nerdOut = [JsLogo, CssLogo, Node, BootstrapLogo, NpmLogo, ExpressLogo, MySql]
-    const budgetTacker = [JsLogo, CssLogo, Html, NpmLogo, ExpressLogo, MongoDb]
-    const workoutTracker = [JsLogo, CssLogo, Html, NpmLogo, ExpressLogo, MongoDb]
-    const haggleMVC = [JsLogo, CssLogo, BootstrapLogo, NpmLogo, ExpressLogo, MongoDb]
-
-    const numbers = ["1", "2", "3"]
-    const otherNum = ["4", "5", "6"]
-
-    const fullStackLogos = [
-        {
-            logos: JsLogo,
-        }
-
-    ]
-
-
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -109,8 +73,6 @@ export default function FullWidthTabs() {
         setValue(index);
     };
 
-    console.log(fullStackLogos);
-    console.log(Projects);
 
     return (
         <div className={classes.root}>
@@ -135,7 +97,7 @@ export default function FullWidthTabs() {
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}
                 onChangeIndex={handleChangeIndex}
-                
+
             >
 
                 <TabPanel value={value} index={0} dir={theme.direction}>
@@ -152,11 +114,11 @@ export default function FullWidthTabs() {
                 </TabPanel>
 
 
-                <TabPanel 
-                xs={12} 
-                value={value} 
-                index={1} 
-                dir={theme.direction}>
+                <TabPanel
+                    xs={12}
+                    value={value}
+                    index={1}
+                    dir={theme.direction}>
 
                     <Grid xs={12}>
                         <Box

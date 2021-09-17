@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react'
+import React, { useState } from 'react'
 import {
     SwipeableDrawer,
     ListItem,
@@ -8,8 +8,6 @@ import {
     IconButton,
     AppBar,
     Toolbar,
-    Typography,
-    Button,
     Avatar,
     Box
 } from '@material-ui/core/';
@@ -24,7 +22,7 @@ import {
     LinkedIn,
     Phone
 } from '@material-ui/icons/';
-import { withRouter, Link } from "react-router-dom"
+import { withRouter} from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
 import InvertLogo from "../../Assets/Logo/logo_size.jpg"
 import PikesPeak from "../../Assets/img/Pikes-Peak-300x400.jpg"

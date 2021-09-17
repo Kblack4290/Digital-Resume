@@ -1,6 +1,13 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, Box, Paper, Typography, Avatar, Divider } from "@material-ui/core"
+import { 
+    Container, 
+    Grid, 
+    Box, 
+    Paper, 
+    Typography, 
+    Avatar, 
+    Divider } from "@material-ui/core"
 import Holiday from '../Assets/img/HolidayParty.jpg'
 import Hero from '../components/Hero'
 import LogoBl from '../Assets/Logo/logo_size_invert.jpg'

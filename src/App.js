@@ -5,7 +5,6 @@ import About from "./pages/About"
 import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import Nav from "./components/Nav/Nav"
-import Particles from "./components/Landcontent/Content"
 import './App.css';
 
 function App() {
