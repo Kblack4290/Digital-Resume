@@ -1,13 +1,11 @@
-import "./style.css"
+import useStyles from './styles.js'
 import React from 'react'
 import { Grid, Box, Paper, Typography } from "@material-ui/core"
 
-
-
-
 const Hero = () => {
+    const classes =useStyles()
     return (
-        <Paper  id="hero" xs={12} >
+        <Paper className={classes.hero} xs={12} >
             <Box component="div"
                 display="flex"
                 
@@ -21,7 +19,7 @@ const Hero = () => {
                             alignItems="flex-end"
                             justifyContent="center"
                         >
-                            <Typography variant="h1" id="about-header" >ABOUT</Typography>
+                            <Typography variant="h1" className={classes.aboutHeader} >ABOUT</Typography>
                         </Box>
                     </Grid>
                     <Grid xs={6} style={{ float: "right" }}>
@@ -32,7 +30,7 @@ const Hero = () => {
                             mr={5}
 
                         >
-                            <Typography variant="h1" id="about-header" >SKILLS</Typography>
+                            <Typography variant="h1" className={classes.aboutHeader}  >SKILLS</Typography>
                         </Box>
                     </Grid>
                 </Grid>

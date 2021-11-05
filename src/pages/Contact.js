@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 const Contact = () => {
     const classes = useStyles();
     const form = document.forms['myForm'];
+    
     function sendEmail(e) {
         e.preventDefault();
 
