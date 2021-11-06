@@ -16,6 +16,7 @@ import WorkOut from '../../Assets/img/FULLSTACK-WORKOUT.png'
 import HaggleMVC from '../../Assets/img/HAGGLE-MVC.png'
 import NoteTaker from '../../Assets/img/Frontend-NoteTaker.png'
 import { Grid } from '@material-ui/core';
+import useStyles from './styles.js'
 
 
 function TabPanel(props) {
@@ -51,12 +52,6 @@ function a11yProps(index) {
     };
 }
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        backgroundColor: theme.palette.background.paper,
-
-    },
-}));
 
 export default function FullWidthTabs() {
     const classes = useStyles();

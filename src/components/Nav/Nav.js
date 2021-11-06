@@ -22,50 +22,17 @@ import {
     LinkedIn,
     Phone
 } from '@material-ui/icons/';
-import { withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
 import InvertLogo from "../../Assets/Logo/logo_size.jpg"
 import PikesPeak from "../../Assets/img/Pikes-Peak-300x400.jpg"
 import Resume from "../../Assets/img/KBlack_DEV_Resume.pdf"
-import "./style.css"
-
-
-const useStyles = makeStyles((theme) => ({
-    drawer: {
-        width: '200px',
-
-    },
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    },
-    large: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
-    },
-
-    navIcons: {
-        color: "#ffff",
-        marginRight: "20px",
-        "&:hover": {
-            fontSize: "2.5rem",
-
-        }
-    }
-
-}));
+import useStyles from './styles.js'
 
 
 const Nav = (props) => {
 
     const [open, setOpen] = useState(false);
-
-
 
     const { history } = props;
     const classes = useStyles();
@@ -118,9 +85,9 @@ const Nav = (props) => {
 
     return (
         <div className={classes.root}>
-            <AppBar 
-            id="bar" 
-            position="fixed">
+            <AppBar
+                className={classes.bar}
+                position="fixed">
                 <Toolbar>
                     <IconButton
                         edge="start"
@@ -163,7 +130,7 @@ const Nav = (props) => {
                     alt="Image of Pikes Peak CO"
                     src={PikesPeak}
                     className={classes.large}
-                    id="avatar" />
+                />
 
 
 
