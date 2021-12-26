@@ -26,7 +26,7 @@ import { withRouter } from "react-router-dom"
 import MenuIcon from "@material-ui/icons/Menu"
 import InvertLogo from "../../Assets/Logo/logo_size.jpg"
 import PikesPeak from "../../Assets/img/Pikes-Peak-300x400.jpg"
-import Resume from "../../Assets/img/KBlack_DEV_Resume.pdf"
+import Resume from "../../Assets/img/KBlack_Resume_SE.pdf"
 import useStyles from './styles.js'
 
 
